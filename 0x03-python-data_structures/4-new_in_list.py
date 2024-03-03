@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
+    temp = my_list[:]
     if idx < 0:
-        return (my_list)
-    if idx > len(my_list) - 1:
-        return (my_list)
-    my_list[idx] = element
-    return (my_list)
+        return (temp)
+    elif idx > len(my_list) - 1:
+        return (temp)
+    else:
+        temp[idx] = element
+        return (temp)
