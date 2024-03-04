@@ -44,7 +44,7 @@ int is_palindrome(listint_t **head)
  *
  * Return: 1 if the same, 0 if not
  */
-int compare_lists(listint *head, listint_t *middle, int len)
+int compare_lists(listint_t *head, listint_t *middle, int len)
 {
 	int i;
 
