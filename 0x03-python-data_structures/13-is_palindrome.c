@@ -1,9 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
 
-int compare_lists(listint *head, listint_t *middle, int len);
-void reverse(listint_t **head);
-
 /**
  * is_palindrome - Checks if singly linked list is a palindrome
  * @head: Double pointer to the first node in the list
@@ -23,6 +20,7 @@ int is_palindrome(listint_t **head)
 
 	for (len = 0; tmp != NULL; len++)
 		tmp = tmp->next;
+
 	len = len / 2;
 
 	for (i = 1; i < len; i++)
@@ -35,7 +33,7 @@ int is_palindrome(listint_t **head)
 	reverse(&middle);
 	i = compare_lists(*head, middle, len);
 
-	return (0);
+	return (i);
 }
 
 /**
