@@ -1,8 +1,6 @@
 #!/usr/bn/python3
 def roman_to_int(roman_string):
-    if roman_string == None or type(roman_string) != str:
-        return (0)
-    dic = {
+    roman_dic = {
             'I': 1,
             'V': 5,
             'X': 10,
@@ -11,12 +9,15 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000
             }
-    num = [dic[x] for x in roman_string] + [0]
-    result = 0
-
-    for i in range(len(num)  - 1):
-        if num[i] >= num[i + 1]:
-            result += num[i]
-        else:
-            result -= num[i]
-    return (result)
+    num = 0
+    if type(roman_string) != str or roman_string == None:
+        return (0)
+    for i, char in enumerate(roman_string):
+        temp = roman_dic[char]
+        try:
+            if temp < roman_dic[roman_string[i + 1]]:
+                temp = temp * -1
+            except IndexError:
+                pass
+            num = num + temp
+        return (num)
