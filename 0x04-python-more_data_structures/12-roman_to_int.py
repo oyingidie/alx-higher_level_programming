@@ -11,17 +11,12 @@ def roman_to_int(roman_string):
             'D': 500,
             'M': 1000
             }
+    num = [dic[x] for x in roman_string] + [0]
     result = 0
-    i = 0
-    while i < len(roman_string):
-        c_char = roman_string[i]
-        c_value = dic.get(c_char)
-        if not c_value:
-            return (0)
-        if i + 1 < len(roman_string) and c_value < dic.get(roman_string[i + 1]):
-            result += dic[roman_string[i + 1]] - c_value
-            i += 2
+
+    for i in range(len(num)  - 1):
+        if num[i] >= num[i + 1]:
+            result += num[i]
         else:
-            result += c_value
-            i += 1
+            result -= num[i]
     return (result)
