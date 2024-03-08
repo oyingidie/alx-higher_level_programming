@@ -3,6 +3,9 @@
 #include <listobject.h>
 #include <bytesobject.h>
 
+void print_python_bytes(PyObject *p);
+void print_python_list(PyObject *p);
+
 /**
  * print_python_bytes - Display information about Python bytes objects
  * @p: Pointer to a Python object
