@@ -1,2 +1,3 @@
 -- create a database in my MySQL server
-CREATE DATABASE IF NOT EXISTS 'hbtn_0c_0';
+-- no SELECT or SHOW statements allowed
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
