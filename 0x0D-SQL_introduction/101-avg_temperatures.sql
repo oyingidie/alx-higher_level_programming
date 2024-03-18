@@ -1,4 +1,4 @@
--- import table dump in the database in my MySQL server
+-- import table dump in a database in my MySQL server
 -- display average temperature by city ordered by descending temperature
 SELECT city, AVG(value) AS average_temp
 FROM temperatures
