@@ -1,5 +1,5 @@
 -- create the database 'hbtn_0d_usa' and table 'cities' on MySQL server
-CREATE DATABSE IF NOT EXISTS hbtn_0d_usa;
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS cities (id INT UNIQUE AUTO_INCREMENT NOT NULL,
 	state_id NOT NULL,
