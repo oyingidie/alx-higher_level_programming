@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-def safe_print_list_integers(my_list=[], x=0):
-    num = 0
-    for items in range(x):
-        try:
-            print("{:d}".format(my_list[items]), end='')
-            num += 1
-        except (ValueError, TypeError, IndexError):
-            pass
-        print()
-        return num
+def safe_print_division(a, b):
+    try:
+        div = a / b
+    except (ValueError, TypeError, ZeroDivisionError):
+        div = None
+    finally:
+        print("Inside result: {}".format(div))
+        return div
