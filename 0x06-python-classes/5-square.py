@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """a class with private instance attribute
-and public instance method that prints a square
+and public instance methods; prints a square
 """
 
 
