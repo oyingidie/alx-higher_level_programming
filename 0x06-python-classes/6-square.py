@@ -21,7 +21,7 @@ class Square:
 
     @property
     def size(self):
-        """retrieves size of the square"""
+        """retrieves size of the square
         Raises:
             TypeError: if size != int
             ValueError: if size < 0
@@ -38,7 +38,7 @@ class Square:
 
     @property
     def position(self):
-        """property of the coordinates of this Square
+        """property of the coordinates of this square
         Raises:
             TypeError: if value != a tuple of 2 integers < 0
         """
@@ -46,7 +46,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """set the position of this Square
+        """set the position of this square
         Args: value as a tuple of two positive integers
         Raises:
             TypeError: if value is not a tuple or any int in tuple < 0
@@ -60,7 +60,7 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Get the area of a Square
+        """get the area of a square
         Returns: The size squared
         """
         return self.__size * self.__size
