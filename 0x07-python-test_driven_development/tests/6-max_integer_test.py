@@ -23,6 +23,10 @@ class TestMaxInteger(unittest.TestCase):
         """tests for a list with negative numbers"""
         self.assertEqual(max_integer([-2, 1, -5]), 1)
 
+    def test_max_at_beginning(self):
+        """tests a list with a beginning max value"""
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
+
     def test_all_same_elements(self):
         """tests for a list with all elements the same"""
         self.assertEqual(max_integer([3, 3, 3]), 3)
