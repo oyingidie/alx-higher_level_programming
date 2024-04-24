@@ -13,23 +13,18 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    flag = 0
+
     a = 0
+    while a < len(text) and text[a] == ' ':
+        a += 1
+
     while a < len(text):
-        if flag == 0:
-            if text[a] == ' ':
-                a += 1
-                continue
-            else:
-                flag = 1
-        if flag == 1:
-            if text[a] == '?' or text[a] == '.' or text[a] == ':':
-                print(text[a])
-                print()
-                flag = 0
-            else:
-                if text[a] == "\n":
-                    a += 1
-                    continue
-                print(text[a], end="")
+        print(text[a], end="")
+        if text[a] == "\n" or text[a] in ".?:":
+            if text[a] in ".?:":
+                print("\n")
             a += 1
+            while a < len(text) and text[a] == ' ':
+                a += 1
+            continue
+        a += 1
