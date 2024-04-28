@@ -5,8 +5,7 @@ import sys
 
 def init_board(n):
     """initialise an N-by-N sized chessboard with zeros"""
-    board = [[0 for _ in range(n)] for _ in range(n)]
-    return (board)
+    return [[0 for _ in range(n)] for _ in range(n)]
 
 def is_safe(board, row, col):
     """checks if placing a queen at (row, col) is safe"""
