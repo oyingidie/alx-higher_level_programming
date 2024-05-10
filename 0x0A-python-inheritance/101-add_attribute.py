@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a function that possibly adds new 
+"""a function that possibly adds new
 attribute to an object
 """
 
