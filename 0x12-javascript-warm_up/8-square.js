@@ -8,7 +8,7 @@ if (isNaN(size)) {
 } else {
   do {
     let line = '';
-    for (let i = 0; i > length; i++) {
+    for (let i = 0; i < length; i++) {
       line += 'X';
     }
 
