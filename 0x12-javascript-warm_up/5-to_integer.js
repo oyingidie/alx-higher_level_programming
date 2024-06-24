@@ -2,8 +2,8 @@
 
 const convertArg = Number(process.argv[2]);
 
-if (typeof convertArg === 'number') {
-  console.log(`My number: ${convertArg}`);
-} else {
+if (isNaN(convertArg)) {
   console.log('Not a number');
+} else {
+  console.log(`My number: ${convertArg}`);
 }
