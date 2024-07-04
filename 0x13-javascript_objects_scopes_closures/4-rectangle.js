@@ -9,15 +9,9 @@ module.exports = class Rectangle {
   }
 
   print () {
-    do {
-      let row = '';
-      for (let i = 0; i < this.width; i++) {
-        row += 'X';
-      }
-
-      console.log(row);
-      this.height--;
-    } while (this.height > 0);
+    for (let i = 0; i < this.height; ++i) {
+      console.log('X'.repeat(this.width));
+    }
   }
 
   rotate () {
